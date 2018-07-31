@@ -37,7 +37,7 @@ public class LogAspect extends BaseAspect{
     }
     @After("pointcut()")
     public void doAfter(JoinPoint joinPoint){
-    	getLogger().info("方法:" + getName(joinPoint)+" 结束");
+//    	getLogger().info("方法:" + getName(joinPoint)+" 结束");
     }
     
 }

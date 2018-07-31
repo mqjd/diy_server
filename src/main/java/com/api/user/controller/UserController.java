@@ -9,7 +9,8 @@ public class UserController {
 	
 	@RequestMapping("getUser")
 	public String getUser(String xxx) {
-		return xxx.substring(2);
+		String substring = xxx.substring(2);
+		return substring;
 	}
 
 }
