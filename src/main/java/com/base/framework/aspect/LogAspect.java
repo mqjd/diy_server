@@ -9,11 +9,11 @@ import org.aspectj.lang.annotation.Before;
 import org.aspectj.lang.annotation.Pointcut;
 import org.springframework.stereotype.Component;
 
-import com.base.framework.BaseComponent.BaseComponent;
+import com.base.framework.BaseComponent.BaseAspect;
 
 @Aspect
 @Component
-public class LogAspect extends BaseComponent{
+public class LogAspect extends BaseAspect{
 	
 	private ThreadLocal<Long> startTime = new ThreadLocal<Long>();
 
@@ -27,7 +27,7 @@ public class LogAspect extends BaseComponent{
     }
     @AfterReturning(returning = "ret", pointcut = "pointcut()")  
     public void doAfterReturning(JoinPoint joinPoint){
-    	logger.info("方法返回，耗时："+ (System.currentTimeMillis() - startTime.get())+"ms");
+    	//logger.info("方法返回，耗时："+ (System.currentTimeMillis() - startTime.get())+"ms");
     }
     
     @AfterThrowing("pointcut()")
