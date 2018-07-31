@@ -9,7 +9,7 @@ public class UserController {
 	
 	@RequestMapping("getUser")
 	public String getUser(String xxx) {
-		return xxx;
+		return xxx.substring(2);
 	}
 
 }

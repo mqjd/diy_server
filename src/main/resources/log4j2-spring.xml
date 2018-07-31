@@ -13,11 +13,11 @@
     	<File>${logdir}/info.${appname}.log</File>
 	    <filter class="ch.qos.logback.classic.filter.LevelFilter">
 	        <!--过滤 Error-->
-	        <level>ERROR</level>
+	        <level>INFO</level>
 	        <!--匹配到就禁止-->
-	        <onMatch>DENY</onMatch>
+	        <onMatch>ACCEPT</onMatch>
 	        <!--没有匹配到就允许-->
-	        <onMismatch>ACCEPT</onMismatch>
+	        <onMismatch>DENY</onMismatch>
 	    </filter>
 		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
 		     <!--文件路径,定义了日志的切分方式——把每一天的日志归档到一个文件中,以防止日志填满整个磁盘空间-->
