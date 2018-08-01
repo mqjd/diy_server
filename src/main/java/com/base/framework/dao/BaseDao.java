@@ -10,7 +10,9 @@ import org.springframework.jdbc.core.namedparam.BeanPropertySqlParameterSource;
 import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
 import org.springframework.jdbc.core.namedparam.SqlParameterSource;
 
-public class BaseDao {
+import com.base.framework.BaseComponent.BaseComponent;
+
+public class BaseDao extends BaseComponent{
 
     @Autowired
     private NamedParameterJdbcTemplate jdbcTemplate;

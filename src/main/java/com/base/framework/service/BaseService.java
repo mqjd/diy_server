@@ -1,5 +1,7 @@
 package com.base.framework.service;
 
-public class BaseService {
+import com.base.framework.BaseComponent.BaseComponent;
+
+public class BaseService extends BaseComponent{
 
 }
