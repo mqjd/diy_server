@@ -1,4 +1,4 @@
-package com.base.framework.dao;
+package com.base.framework.model;
 
 import java.io.Serializable;
 

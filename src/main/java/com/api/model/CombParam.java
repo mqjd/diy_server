@@ -1,6 +1,6 @@
 package com.api.model;
 
-import com.base.framework.dao.BaseModel;
+import com.base.framework.model.BaseModel;
 
 public class CombParam extends BaseModel{
 

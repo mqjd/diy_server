@@ -11,6 +11,7 @@ import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
 import org.springframework.jdbc.core.namedparam.SqlParameterSource;
 
 import com.base.framework.BaseComponent.BaseComponent;
+import com.base.framework.model.BaseModel;
 
 public class BaseDao extends BaseComponent{
 
