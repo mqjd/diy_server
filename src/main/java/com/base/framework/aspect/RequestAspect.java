@@ -36,8 +36,8 @@ public class RequestAspect extends BaseAspect{
     }
     
     @AfterThrowing(value = "pointcut()",throwing = "exception")
-    public void doAfterThrowing(JoinPoint joinPoint,Throwable throwable){
-    	logger.info("请求异常：" + getStackTrace(throwable));
+    public void doAfterThrowing(JoinPoint joinPoint,Throwable exception){
+    	logger.info("请求异常：" + getStackTrace(exception));
     }
 	
 }
