@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.api.comb.service.CombService;
-import com.api.domain.CombParam;
+import com.api.model.CombParam;
 
 @RestController
 @RequestMapping("CombController")

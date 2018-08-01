@@ -28,4 +28,4 @@ spring:
 mybatis:
   mapper-locations:
   - classpath:mapper/*.xml
-  type-aliases-package: com.api.domain
+  type-aliases-package: com.api.model

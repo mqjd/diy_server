@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="com.api.comb.dao.CombDao" >
-    <select id="queryComb" resultType="java.util.HashMap" parameterType="com.api.domain.CombParam" >
+    <select id="queryComb" resultType="java.util.HashMap" parameterType="com.api.model.CombParam" >
         <if test='param.id == "1"'>
         select user_id,user_code,user_name,comments from sys_user
         </if>

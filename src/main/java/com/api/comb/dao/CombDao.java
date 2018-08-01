@@ -6,7 +6,7 @@ import java.util.Map;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 
-import com.api.domain.CombParam;
+import com.api.model.CombParam;
 
 @Mapper
 public interface CombDao {

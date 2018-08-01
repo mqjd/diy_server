@@ -7,7 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.api.comb.dao.CombDao;
-import com.api.domain.CombParam;
+import com.api.model.CombParam;
 
 @Service
 public class CombService {

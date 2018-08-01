@@ -5,24 +5,18 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 public abstract class BaseAspect extends BaseComponent{
-
-	ThreadLocal<Logger> loggers = new ThreadLocal<Logger>();
 	
 	protected String getSourceClass(JoinPoint joinPoint) {
 		return joinPoint.getTarget().getClass().getName();
 	}
 	
 	protected String getName(JoinPoint joinPoint) {
-		return joinPoint.getSignature().getName();
+		return joinPoint.getSignature().toString();
 	}
 	
-	protected void initLog(JoinPoint joinPoint){
+	protected Logger getLogger(JoinPoint joinPoint) {
 		Logger logger = LoggerFactory.getLogger(joinPoint.getTarget().getClass());
-		loggers.set(logger);
-	}
-	
-	protected Logger getLogger() {
-		return loggers.get();
+		return logger;
 	}
 	
 }
