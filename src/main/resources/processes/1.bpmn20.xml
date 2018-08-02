@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:activiti="http://activiti.org/bpmn" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:omgdc="http://www.omg.org/spec/DD/20100524/DC" xmlns:omgdi="http://www.omg.org/spec/DD/20100524/DI" typeLanguage="http://www.w3.org/2001/XMLSchema" expressionLanguage="http://www.w3.org/1999/XPath" targetNamespace="http://www.activiti.org/test">
+  <process id="process_test" name="测试流程">
+    <startEvent id="startevent" name="开始" activiti:formKey="MM1"/>
+    <endEvent id="endevent" name="结束"/>
+    <userTask id="starttask" name="发起" activiti:assignee="MM" activiti:formKey="MM1"/>
+    <userTask id="dealtask" name="处理" activiti:assignee="MM" activiti:formKey="MM2"/>
+    <sequenceFlow id="sequenceFlow1" name="" sourceRef="startevent" targetRef="starttask"/>
+    <sequenceFlow id="sequenceFlow2" name="" sourceRef="starttask" targetRef="dealtask"/>
+    <sequenceFlow id="sequenceFlow3" name="" sourceRef="dealtask" targetRef="endevent"/>
+  </process>
+</definitions>

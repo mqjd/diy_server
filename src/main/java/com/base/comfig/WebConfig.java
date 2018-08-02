@@ -12,8 +12,8 @@ import com.base.comfig.filter.SessionFilter;
 public class WebConfig {
 
     @Bean
-    public FilterRegistrationBean<Filter> someFilterRegistration() {
-        FilterRegistrationBean<Filter> registration = new FilterRegistrationBean<Filter>();
+    public FilterRegistrationBean someFilterRegistration() {
+        FilterRegistrationBean registration = new FilterRegistrationBean();
         registration.setFilter(sessionFilter());
         registration.addUrlPatterns("/*");
         registration.addInitParameter("paramName", "paramValue");
