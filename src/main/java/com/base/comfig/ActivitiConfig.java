@@ -25,6 +25,7 @@ public class ActivitiConfig extends AbstractProcessEngineAutoConfiguration{
 		baseSpringProcessEngineConfiguration.setLabelFontName("宋体");
 		baseSpringProcessEngineConfiguration.setXmlEncoding("UTF-8");
 		baseSpringProcessEngineConfiguration.setAsyncExecutorActivate(false);
+		baseSpringProcessEngineConfiguration.setCreateDiagramOnDeploy(false);
 		//baseSpringProcessEngineConfiguration.setDatabaseSchemaUpdate(ProcessEngineConfiguration.DB_SCHEMA_UPDATE_FALSE);
 		return baseSpringProcessEngineConfiguration;
     }
