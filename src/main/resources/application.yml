@@ -1,11 +1,14 @@
 server:
   address: localhost
   port: 7000
-  servlet:
-    context-path: /
+  context-path: /
 logging:
   config: classpath:log4j2-spring.xml
 spring:
+  aop:
+    proxy-target-class: true
+  activiti:
+    check-process-definitions: false
   datasource:
     url: jdbc:mysql://localhost:3306/mm?useUnicode=true&characterEncoding=UTF8&useSSL=false
     username: mm
@@ -16,8 +19,7 @@ spring:
   thymeleaf:
     enabled: true
     encoding: UTF-8
-    servlet:
-      content-type: text/html; charset=utf-8
+    content-type: text/html; charset=utf-8
     cache: false
   jpa:
     database: mysql

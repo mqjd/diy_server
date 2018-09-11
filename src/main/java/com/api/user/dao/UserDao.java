@@ -5,14 +5,14 @@ import java.util.Map;
 
 import org.springframework.stereotype.Repository;
 
-import com.base.framework.dao.BaseDao;
+import com.base.framework.dao.impl.BaseDao;
 
 @Repository
 public class UserDao extends BaseDao{
 
 	public List<Map<String, Object>> getUser() {
 		String sql = "select * from sys_user";
-		List<Map<String, Object>> result = queryForList(sql);
+		List<Map<String, Object>> result = query(sql);
 		return result;
 	}
 }

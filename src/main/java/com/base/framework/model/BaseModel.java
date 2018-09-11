@@ -2,9 +2,20 @@ package com.base.framework.model;
 
 import java.io.Serializable;
 
-public abstract class BaseModel implements Serializable{
+import javax.persistence.Transient;
 
-	private static final long serialVersionUID = 5395813746030135885L;
+public class BaseModel implements Serializable{
+	
+	private static final long serialVersionUID = 4488293584962300985L;
 
-
+	@Transient
+	public SqlBuilder sqlBuilder() {
+		return new SqlBuilder(this);
+	}
+	
+	@Transient
+	public ModelMetadata metadata() {
+		return new ModelMetadata(this);
+	}
+	
 }

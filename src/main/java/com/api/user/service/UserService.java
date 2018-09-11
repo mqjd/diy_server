@@ -6,9 +6,9 @@ import java.util.Map;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.api.Mapper.UserMapper;
 import com.api.model.SysUser;
 import com.api.user.dao.UserDao;
-import com.api.user.dao.UserMapper;
 import com.base.framework.service.BaseService;
 
 @Service
