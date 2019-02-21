@@ -1,4 +1,4 @@
-package com.base.comfig;
+package com.base.config;
 import java.io.IOException;
 
 import javax.sql.DataSource;
