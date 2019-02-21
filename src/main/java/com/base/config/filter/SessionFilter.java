@@ -1,4 +1,4 @@
-package com.base.comfig.filter;
+package com.base.config.filter;
 
 import java.io.IOException;
 
