@@ -32,7 +32,7 @@ public class RequestAspect extends BaseAspect{
     }
     @AfterReturning(returning = "ret", pointcut = "pointcut()")  
     public void doAfter(JoinPoint joinPoint){
-    	logger.info("请求耗时：" + (System.currentTimeMillis() - startTime.get())+"ms");
+    	//logger.info("请求耗时：" + (System.currentTimeMillis() - startTime.get())+"ms");
     }
     
     @AfterThrowing(value = "pointcut()",throwing = "exception")

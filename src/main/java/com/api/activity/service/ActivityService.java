@@ -3,6 +3,8 @@ package com.api.activity.service;
 import java.util.List;
 import java.util.Map;
 
+import org.activiti.bpmn.model.BpmnModel;
+import org.activiti.bpmn.model.Process;
 import org.activiti.engine.FormService;
 import org.activiti.engine.HistoryService;
 import org.activiti.engine.IdentityService;
@@ -11,14 +13,16 @@ import org.activiti.engine.RuntimeService;
 import org.activiti.engine.TaskService;
 import org.activiti.engine.history.HistoricProcessInstance;
 import org.activiti.engine.history.HistoricTaskInstance;
+import org.activiti.engine.repository.Deployment;
 import org.activiti.engine.repository.ProcessDefinition;
 import org.activiti.engine.runtime.ProcessInstance;
 import org.activiti.engine.task.Task;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
+import com.base.framework.BaseComponent.BaseComponent;
 
 @Component
-public class ActivityService {
+public class ActivityService extends BaseComponent{
 	
 	
 	@Autowired
@@ -401,4 +405,19 @@ public class ActivityService {
 		return processDefinition;
 	}
 
+	/**
+	 说明：部署流程
+	 * @param process
+	 * @return
+	 */
+	public Deployment deploy(Process process) {
+		BpmnModel mBpmnModel = new BpmnModel();
+		mBpmnModel.addProcess(process);
+		Deployment deploy = repositoryService.createDeployment()
+		.addBpmnModel(process.getId() + ".bpmn", mBpmnModel)
+		.name(process.getName())
+		.deploy();
+		return deploy;
+	}
+	
 }

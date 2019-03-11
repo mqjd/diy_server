@@ -29,7 +29,6 @@ public class SessionFilter implements Filter{
 		
 		HttpServletRequest servletRequest = (HttpServletRequest) request;
 		HttpServletResponse servletResponse = (HttpServletResponse) response;
-		servletResponse.setHeader("Access-Control-Allow-Origin", "*"); 
 /*		Object user = servletRequest.getSession().getAttribute("USER");
 		if (user == null) {
 			servletResponse.getWriter().write("toLogin");

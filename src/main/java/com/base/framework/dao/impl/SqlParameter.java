@@ -1,7 +1,5 @@
 package com.base.framework.dao.impl;
 
-import static org.hamcrest.CoreMatchers.nullValue;
-
 import java.util.LinkedHashMap;
 import java.util.Map;
 
@@ -46,7 +44,7 @@ public class SqlParameter extends MapSqlParameterSource {
 		}else if (model != null) {
 			return model.metadata().getColumnValue(paramName);
 		}else {
-			return nullValue();
+			return null;
 		}
 	}
 
